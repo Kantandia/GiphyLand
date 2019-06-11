@@ -52,4 +52,16 @@ $(document).ready(function() {
             displayButtons();
           });
     
+
+          //Function iterates through topics array to display button with array values in "myButtons" section of HTML
+	function displayButtons() {
+        $("#myButtons").empty();
+        for (var i = 0; i < topics.length; i++) {
+          var a = $('<button class="btn btn-primary">');
+          a.attr("id", "show");
+          a.attr("data-search", topics[i]);
+          a.text(topics[i]);
+          $("#myButtons").append(a);
+        }
+      }
       
