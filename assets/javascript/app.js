@@ -42,3 +42,14 @@ $(document).ready(function() {
         });
     }
     
+      //Submit button click event takes search term from form input, trims and pushes to topics array, displays button
+        $("#addShow").on("click", function(event) {
+            event.preventDefault();
+            var newShow = $("#netflixInput").val().trim();
+            topics.push(newShow);
+            console.log(topics);
+            $("#netflixInput").val('');
+            displayButtons();
+          });
+    
+      
