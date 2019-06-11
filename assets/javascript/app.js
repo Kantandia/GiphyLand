@@ -64,4 +64,6 @@ $(document).ready(function() {
           $("#myButtons").append(a);
         }
       }
-      
+      displayButtons();
+
+  
