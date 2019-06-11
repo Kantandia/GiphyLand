@@ -73,4 +73,16 @@ $(document).ready(function() {
  //Click event on gifs with class of "netflixGiphy" executes pausePlayGifs function
  $(document).on("click", ".netflixGiphy", pausePlayGifs);
 
- 
+ //Function accesses "data-state" attribute and depending on status, changes image source to "data-animate" or "data-still"
+ function pausePlayGifs() {
+    var state = $(this).attr("data-state");
+   if (state === "still") {
+     $(this).attr("src", $(this).attr("data-animate"));
+     $(this).attr("data-state", "animate");
+   } else {
+     $(this).attr("src", $(this).attr("data-still"));
+     $(this).attr("data-state", "still");
+}
+}
+
+});
