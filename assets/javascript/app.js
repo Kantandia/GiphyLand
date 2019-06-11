@@ -66,4 +66,11 @@ $(document).ready(function() {
       }
       displayButtons();
 
-  
+  //Click event on button with id of "show" executes displayNetflixShow function
+  $(document).on("click", "#show", displayNetflixShow);
+
+
+ //Click event on gifs with class of "netflixGiphy" executes pausePlayGifs function
+ $(document).on("click", ".netflixGiphy", pausePlayGifs);
+
+ 
